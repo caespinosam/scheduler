@@ -92,7 +92,8 @@ public class Track {
 
 		return afternoonSession.getCurrentConsumedCapacity() == PropertiesConfig.getAfternoonMaxUnitsCapacity();
 	}
-
+	
+	
 	/**
 	 * Removes a talk from the morning session.
 	 * @return the talk that was removed, null if none was removed.

@@ -47,11 +47,14 @@ public class Application {
 			System.out.println(talk.getTitle() + " " + talk.getLength());
 		}
 
-		Workshop result = scheduler.schedule(talks);
-		result.printTalks();		
+		try {
+			Workshop result = scheduler.schedule(talks);
+			result.printTalks();
+
+		} catch (IllegalArgumentException iae) {
+			System.out.println("Illegal argument: " + iae.getMessage());
+		}
 
 	}
-
-	
 
 }
